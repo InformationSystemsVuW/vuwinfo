@@ -316,17 +316,6 @@ a.morelink {
   padding-bottom: 150px; /* this needs to be bigger than footer height*/
 }
 
-/* .footer {
-  position: relative;
-  clear: both;
-  padding-top: 20px;
-} */
-
-/* less than 33% but more than or equal to 25%*/
-.containerWork {
-  margin: 1.5em auto;
-  max-width: 1400px;
-}
 
 .wrapper {
   margin: auto;
@@ -648,6 +637,8 @@ a:hover {
 .containerWork {
   margin: 1.5em auto;
   max-width: 1200px;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 /*-------------------------------------------------------------------*/
@@ -723,4 +714,11 @@ footer {
    position: absolute;
    top: 0;
    width: 100%;
+}
+
+.anchor {
+  display: block;
+  height: 70px;
+  margin-top: -70px;
+  visibility: hidden;
 }

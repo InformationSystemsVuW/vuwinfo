@@ -8,11 +8,10 @@ angular.module('myApp', []).controller('namesCtrl', function ($scope) {
     $scope.levels = [ "", "100", "200", "300"];
     $scope.tris = [ "", "1", "2", "3"];
 
-    $scope.setSelected = function(z) {
-        $scope.selected = z;
-        $scope.directoryShow = false;
-        $scope.buildingInfo = true;
-      };
+
+      $scope.tri1select =function(z) {
+alert(z);
+      }
 
     $scope.setSelectedjob = function(z) {
         $scope.selectedjob = z;
@@ -51,7 +50,7 @@ angular.module('myApp', []).controller('namesCtrl', function ($scope) {
       return out;
     }
   });
-  
+
     $scope.cous = [
         {tri1: 'Trimester 1', time1: 'Monday - 09:00 & Thursday - 09:00 ', loc : 'Kelburn',
         tri2: 'Trimester 1', time2: 'Monday - 16:10 & Wednesday - 16:10 ', 
@@ -119,7 +118,7 @@ angular.module('myApp', []).controller('namesCtrl', function ($scope) {
         { course: '360', bcolor: 'secondary' ,courseName: 'IS for Health Care', Points: '15 Points', level: '300', Prerequisites: '30 200-level pts', it:'' , is: '', tri: '', description: 'This course will enable students to apply practical cases using modelling technologies to enable students to acquire and practice the skills necessary to define and implement health information systems.  ', image: '', icon: 'images/INFO 360.jpg',url: 'https://www.victoria.ac.nz/courses/info/360/2020', coordinator:'' },
         { course: '381', bcolor: 'secondary' ,courseName: 'Applied Machine Learning', Points: '15 Points', level: '300', Prerequisites: 'one of INFO264, 281, MATH141, 251, 277', it:'' , is: '', tri: 'Trimester 2', tri2: '2', description: 'In this course you will learn about the principles and applications of advanced machine learning models. You will carry out the preparation and processing required for selecting input data for machine learning models, quantitatively evaluate and qualitatively interpret the outcomes of model learning or prediction ', image: '', icon: 'images/INFO 381.jpg',url: 'https://www.victoria.ac.nz/courses/info/381/2020', coordinator:'' },
         // { course: '391', bcolor: 'secondary' ,courseName: 'Research Paper in Information Systems', Points: '15 Points', level: '300', Prerequisites: 'Permission of Head of School, 30 300-level pts', it:'' , is: '', tri: 'Trimester 1, 2 & 3', description: 'This course is a supervised investigation of information systems issues. The investigation may take the form of a case study, action research, extended research essay, or other research project. ', image: '', icon: 'images/391.jpg',url: 'https://www.victoria.ac.nz/courses/info/391/2020', coordinator:'' },
-        { course: '320', bcolor: 'primary' ,courseName: 'Project in IS', Points: '15 Points', level: '300', Prerequisites: 'B+ or better in any 2: 226, 231, 234, 246, 264; & 15 300 pts', it:'IT Capstone' , is: 'BA Capstone', tri: '', description: 'This course provides students with an opportunity to apply their theoretical knowledge to a practical problem in the area of information systems. Students work in teams on real projects for real clients. The course coordinator defines the projects.', image: '', icon: 'images/INFO 320.jpg',url: 'https://www.victoria.ac.nz/courses/info/320/2020', coordinator:'',
+        { course: '320', bcolor: 'primary' ,courseName: 'Project in IS', Points: '15 Points', level: '300', Prerequisites: 'B+ or better in any 2: 226, 231, 234, 246, 264; & 15 300 pts', it:'IT Capstone' , is: 'BA Capstone', tri: 'Trimester 2',tri2: '2', description: 'This course provides students with an opportunity to apply their theoretical knowledge to a practical problem in the area of information systems. Students work in teams on real projects for real clients. The course coordinator defines the projects.', image: '', icon: 'images/INFO 320.jpg',url: 'https://www.victoria.ac.nz/courses/info/320/2020', coordinator:'',
         tes: 'Course Testimoials',student: 'Hayley Skelton,', status: 'Graduate',course1: 320, p1: "INFO320 (Projects in Information Systems), in my opinion it is the perfect capstone to an INFO major. It was great to have the opportunity to use all I'd learned throughout my degree in a real project. Getting some real experience of communicating with stakeholders, solving issues, ensuring deliverables are on time and giving a presentation of your ideas was invaluable." },
         { course: '395', bcolor: 'warning' , courseName: 'Case Studies in IS', Points: '15 Points', level: '300', Prerequisites: '30 200-level pts, and 15 300-level pts', it:'' , is: 'BA Capstone', tri: 'Trimester 2', tri2: '2', description: 'In this course you will analyse the human, organisational, and environmental perspective of the impact of new or existing information systems, including management of IT-induced change. ', image: '', icon: 'images/INFO 395.jpg',url: 'https://www.victoria.ac.nz/courses/info/395/2020', coordinator:'' ,
         tes: 'Course Testimoials',student: 'Randall Smith,', status: 'Graduate',course1: 395, p1: "INFO395 - Case Studies. I loved the problem solving opportunities offered through this course. I credit this course for the ease of transition I've had into a career with top tier consulting firms. "},

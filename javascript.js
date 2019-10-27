@@ -121,6 +121,96 @@ $(function () {
   })
 })
 
+var courseplan = [];
+var courseplan1 = [];
+var courseplan2 = [];
+var courseplan3 = [];
+var pointsplaned;
+$(function () {
+  $('input:checkbox').change(function () {
+    // var infotype = $('#infotype input:radio:checked').val()
+    // alert(infotype);
+    document.getElementById("p1").innerHTML = "";
+    if ($(this).is(".plan:checked")) {
+      var tri1cou = 'INFO ' + $(this).val();
+      courseplan.push(tri1cou);
+      courseplan.sort();
+      pointsplaned = courseplan.length * 15;
+      // alert("Courses I will take are " + courseplan.join(", "));
+      document.getElementById("trione2020").innerHTML = courseplan.join(", ")  ;
+      updatecourse();
+    }
+    else if ($(this).is(".plan:not(:checked)")) {
+      // alert("Checkbox is unchecked.");
+      var removetri1 = 'INFO ' + $(this).val();
+      var removeItem = removetri1;
+      for (var i = 0; i < courseplan.length; i++) {
+        if (courseplan[i] === removeItem) {
+          courseplan.splice(i, 1);
+        }
+      }
+      courseplan.sort();
+      pointsplaned = courseplan.length * 15;
+       document.getElementById("trione2020").innerHTML = courseplan.join(", ")  ;
+      updatecourse();
+      //  alert("Courses I will take are: " + coursestaken.join(", "));
+    }
+
+    if ($(this).is(".plan2:checked")) {
+      var tri2cou = 'INFO ' + $(this).val();
+      courseplan2.push(tri2cou);
+      courseplan2.sort();
+      pointsplaned = courseplan2.length * 15;
+      // alert("Courses I will take are " + courseplan2.join(", "));
+      document.getElementById("tritwo2020").innerHTML = courseplan2.join(", ") ;
+      updatecourse();
+    }
+    else if ($(this).is(".plan2:not(:checked)")) {
+      // alert("Checkbox is unchecked.");
+      var removetri2 = 'INFO ' + $(this).val();
+      var removeItem = removetri2;
+      for (var i = 0; i < courseplan2.length; i++) {
+        if (courseplan2[i] === removeItem) {
+          courseplan2.splice(i, 1);
+        }
+      }
+      courseplan2.sort();
+      pointsplaned = courseplan2.length * 15;
+       document.getElementById("tritwo2020").innerHTML = courseplan2.join(", ") ;
+      updatecourse();
+      //  alert("Courses I will take are: " + coursestaken.join(", "));
+    }
+
+
+    if ($(this).is(".plan3:checked")) {
+      var tri3cou = 'INFO ' + $(this).val();
+      courseplan3.push(tri3cou);
+      courseplan3.sort();
+      pointsplaned = courseplan3.length * 15;
+      // alert("Courses I will take are " + courseplan3.join(", "));
+      document.getElementById("trithree2020").innerHTML =  courseplan3.join(", ") ;
+      updatecourse();
+    }
+    else if ($(this).is(".plan3:not(:checked)")) {
+      // alert("Checkbox is unchecked.");
+      var removetri3 = 'INFO ' + $(this).val();
+      var removeItem = removetri3;
+      for (var i = 0; i < courseplan3.length; i++) {
+        if (courseplan3[i] === removeItem) {
+          courseplan3.splice(i, 1);
+        }
+      }
+      courseplan3.sort();
+      pointsplaned = courseplan3.length * 15;
+       document.getElementById("trithree2020").innerHTML =  courseplan3.join(", ") ;
+      updatecourse();
+      //  alert("Courses I will take are: " + coursestaken.join(", "));
+    }
+  })
+})
+
+
+
 
 var coursestaken = [];
 var totalpoints;
@@ -129,7 +219,7 @@ $(function () {
     // var infotype = $('#infotype input:radio:checked').val()
     // alert(infotype);
     document.getElementById("p1").innerHTML = "";
-    if ($(this).is(":checked")) {
+    if ($(this).is(".done:checked")) {
       coursestaken.push($(this).val());
       coursestaken.sort();
       totalpoints = coursestaken.length * 15;
@@ -137,7 +227,7 @@ $(function () {
       // document.getElementById("p1").innerHTML = "Courses I have taken are: " + coursestaken.join(", ") +" | "+ totalpoints +" Points" ;
       updatecourse();
     }
-    else if ($(this).is(":not(:checked)")) {
+    else if ($(this).is(".done:not(:checked)")) {
       // alert("Checkbox is unchecked.");
       var removeItem = $(this).val();
       for (var i = 0; i < coursestaken.length; i++) {
@@ -222,7 +312,7 @@ function updatecourse() {
       if (coursestaken200[i] === "INFO 226") {
         coursestaken200.splice(i, 1);
         IT200.splice(i, 1);
-        alert(coursestaken200);
+        // alert(coursestaken200);
       }
     }
   }
@@ -421,6 +511,11 @@ coursestaken300IT.push("INFO 386"); }
       document.getElementById("info200").style.display ='block';
       document.getElementById("info300").style.display ='block';
       document.getElementById("infocap").style.display ='block';
+      document.getElementById("info100t3").style.display ='block';
+      document.getElementById("info300t3").style.display ='block';
+      document.getElementById("info100t2").style.display ='block';
+      document.getElementById("info200t2").style.display ='block';
+      document.getElementById("info300t2").style.display ='block';
 
   if (majortype == "INFO Major") {
     // document.getElementById("courseselect").style.display = "block";
@@ -432,9 +527,12 @@ coursestaken300IT.push("INFO 386"); }
       document.getElementById("p0").innerHTML = "Take at least 45 INFO points at 200-level and 45 points at 300 level courses including a Capstone paper";
       document.getElementById("s0").innerHTML = "Take at least 45 INFO points at 200-level and 45 points at 300 level courses including a Capstone paper";
       document.getElementById("info100").style.display ='none';
+      document.getElementById("info100t2").style.display ='none';
+      document.getElementById("info100t3").style.display ='none';
     }
     if(coursestaken200.length >= 3){
       document.getElementById("info200").style.display ='none';
+      document.getElementById("info200t2").style.display ='none';
       document.getElementById("p0").innerHTML = "Take at least 45 points at 300 level including a Capstone paper";
       document.getElementById("s0").innerHTML = "Take at least 45 points at 300 level including a Capstone paper";
     }
@@ -444,6 +542,7 @@ coursestaken300IT.push("INFO 386"); }
     }
     if(level100done && coursestaken200.length >= 3 && coursestaken300.length >= 3 && capstone){
       document.getElementById("info300").style.display ='none';
+      document.getElementById("info300t3").style.display ='none';
       document.getElementById("infocap").style.display ='none';
       document.getElementById("p0").innerHTML = "INFO Major completed";
       document.getElementById("s0").innerHTML = "INFO Major completed";
@@ -457,11 +556,14 @@ coursestaken300IT.push("INFO 386"); }
         document.getElementById("courseselect").style.display = "block";
     if(level100done){
       document.getElementById("info100").style.display ='none';
+      document.getElementById("info100t2").style.display ='none';
+      document.getElementById("info100t3").style.display ='none';
       document.getElementById("p0").innerHTML = "Take all INFO 231, INFO 234, INFO 264 and two of INFO 334, INFO 354, INFO 376, INFO 388 and one Capstone paper";
       document.getElementById("s0").innerHTML = "Take all INFO 231, INFO 234, INFO 264 and two of INFO 334, INFO 354, INFO 376, INFO 388 and one Capstone paper";
     }
     if(BA200c){
       document.getElementById("info200").style.display ='none';
+      document.getElementById("info200t2").style.display ='none';
       document.getElementById("p0").innerHTML = "Take two of INFO 334, INFO 354, INFO 376, INFO 388 and one Capstone paper";
       document.getElementById("s0").innerHTML = "Take two of INFO 334, INFO 354, INFO 376, INFO 388 and one Capstone paper";
     }
@@ -474,6 +576,7 @@ coursestaken300IT.push("INFO 386"); }
     // }
     if(level100done && IT200c && coursestaken300BA.length >= 2 && BAcap){
       document.getElementById("info300").style.display ='none';
+      document.getElementById("info300t3").style.display ='none';
       document.getElementById("infocap").style.display ='none';
       // alert("BA done")
       document.getElementById("p0").innerHTML = "Business Analysis specialisation completed";
@@ -487,11 +590,14 @@ coursestaken300IT.push("INFO 386"); }
         document.getElementById("courseselect").style.display = "block";
     if(level100done){
       document.getElementById("info100").style.display ='none';
+      document.getElementById("info100t2").style.display ='none';
+      document.getElementById("info100t3").style.display ='none';
       document.getElementById("p0").innerHTML = "Take all INFO 231, INFO 226, INFO 246, INFO 320 (Capstone) and two of INFO 354, INFO 376, INFO 377, INFO 386";
       document.getElementById("s0").innerHTML = "Take all INFO 231, INFO 226, INFO 246, INFO 320 (Capstone) and two of INFO 354, INFO 376, INFO 377, INFO 386";
     }
     if(IT200c){
       document.getElementById("info200").style.display ='none';
+      document.getElementById("info200t2").style.display ='none';
       document.getElementById("p0").innerHTML = "Take INFO 320 (Capstone) and two of INFO 354, INFO 376, INFO 377, INFO 386";
       document.getElementById("s0").innerHTML = "Take INFO 320 (Capstone) and two of INFO 354, INFO 376, INFO 377, INFO 386";
     }
@@ -501,6 +607,7 @@ coursestaken300IT.push("INFO 386"); }
     }  
     if(level100done && ITcap && coursestaken300IT.length >= 2 && ITcap){
       document.getElementById("info300").style.display ='none';
+      document.getElementById("info300t3").style.display ='none';
       document.getElementById("infocap").style.display ='none';
       // alert("BA done")
       document.getElementById("p0").innerHTML = "IT Solutions specialisation completed";
@@ -553,7 +660,7 @@ function showTab(n) {
     document.getElementById("prevBtn").style.display = "inline";
   }
   if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Submit";
+    // document.getElementById("nextBtn").innerHTML = "Submit";
   } else {
     document.getElementById("nextBtn").innerHTML = "Next";
   }
@@ -573,7 +680,7 @@ function nextPrev(n) {
   // if you have reached the end of the form... :
   if (currentTab >= x.length) {
     //...the form gets submitted:
-    document.getElementById("regForm").submit();
+    // document.getElementById("regForm").submit();
     return false;
   }
   // Otherwise, display the correct tab:
