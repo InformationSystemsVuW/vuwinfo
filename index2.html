@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Info Sys</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="https://kit.fontawesome.com/225910cad6.js"></script>
+</head>
+
+<body>
+    <div ng-app="myApp" ng-controller="namesCtrl">
+        <nav class="navbar navbar-light bg-light justify-content-between" style="  background: rgba(255, 255, 255, 0.1);">
+            <a class="navbar-brand" href="#" style="color: #00A770;">Information Systems</a>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2 field" type="search" placeholder="Search" aria-label="Search" ng-model="test">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#exampleModalLong">Search</button>
+            </form>
+        </nav>
+        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd; z-index: 2;">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="color: #00A770;">Information Systems</a>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                  <ul class="navbar-nav mr-auto mt-2 mt-lg-0"> -->
+        <!-- <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li> -->
+        <!-- </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2 field" type="search" placeholder="Search" aria-label="Search" ng-model="test">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#exampleModalLong">Search</button>
+                  </form>
+                </div>
+              </nav> -->
+        <!-- <img src="images/wellington-promo.jpg" class="card-img" alt="...">
+              <img src="images/info-sys-banner.png" class="card-img" alt="...">
+              <img src="images/course-advice.jpg" class="card-img" alt="...">
+              <img src="images/topic-cover-hr.jpg" class="card-img" alt="...">
+              <img src="images/topic-cover-marketing.jpg" class="card-img" alt="..."> -->
+        <banner banner-model="::vm.metadata">
+            <header class="sector degree-banner banner-with-cover">
+                <div class="cover-holder">
+                    <picture aria-describedby="image-attribution"><img class="cover-pic" id="mainbanner" src="https://www.victoria.ac.nz/__data/assets/image/0018/348300/info-sys-banner.png"></picture>
+                </div>
+                <div class="cover-overlay"></div>
+                <content-switcher>
+                    <div class="centraliser">
+                        <form action="#" method="get" accept-charset="utf-8" class="content-switcher ng-pristine ng-valid">
+                            <div class="group-toggle"><span class="toggle-desc">International information</span>
+                                <a ui-sref=".({ 'international': vm.isInternationalSelected ? undefined : true })" aria-pressed="false" title="Open dialog to switch to information for international students" ng-click="clickToggle( $event )" href="/explore/study-areas/information-systems?international=true">
+                                    <input id="content-toggle" class="toggle ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" hidden="" ng-model="vm.isInternationalSelected" ng-change="vm.showDialog()">
+                                    <label aria-labelledby="toggle-value-label" for="content-toggle" role="presentation"><span></span></label> <span class="aria-only" id="toggle-value-label">OFF</span></a>
+                            </div>
+                        </form>
+                    </div>
+                </content-switcher>
+                <div class="intro">
+                    <div class="title">
+                        <h1>Information Systems<span ng-show="vm.bannerModel.code &amp;&amp; vm.bannerModel.code !== ''" class="ng-hide">&nbsp;–&nbsp;</span></h1></div>
+                    <h3 class="abstract">Learn how to use information technology (IT) to solve business problems, and get the skills to manage information in complex environments.</h3>
+                    <!---->
+                </div>
+                <!---->
+            </header>
+        </banner>
+        <!-- Sticky Nav bar with progress bar -->
+        <div class="sticky">
+            <nav class="shift">
+                <ul>
+                    <li><a href="#">Overview</a></li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">Course Planner</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div>
+        </div>
+
+        <div class="containerWork">
+            <div class="margintext">
+                <h2>About the School of Information System.</h2>
+                <p>The School of Information Management at Victoria University of Wellington offers a Bachelor of Commerce degree with an Information Systems major, BCom (INFO). Information Systems (IS) is the academic discipline that investigates how people and organisations use information and how IS and technology affect people, organisations and society, Information is a crucial resource and how we manage it affects every part of of life so come learn how to use information technology (IT) to solve business, organisation and societal problems and get the skills to manage information, technology and people in complex environments</p>
+            </div>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="narrow">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card mb-3" style="max-width: 100%;">
+                                <div class="row no-gutters">
+                                    <div class="col-md-3">
+                                        <div id="dpmargin">
+                                            <br>
+                                        </div>
+                                        <img src="images/Screenshot (30).png" class="card-img dp1" alt="...">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i>Claudia Sullivan,</i> Current student </h5>
+                                            <p class="card-text">I’m from Christchurch initially, but I love Wellington! It’s a fun and vibrant city that has the perfect balance between student and corporate life. After having looked into the business schools around the country, I decided Victoria offered a degree and a culture which aligned most with me. </p>
+                                            <p class="card-text">Initially, I had intentions to complete my degree with a Marketing and Management major, but since taking INFO101, I decided that Information Systems was better suited to me. Every paper since has solidified that interest.</p>
+                                            <p class="card-text"><i>My advice to prospective students would be:</i> Don’t knock it ‘til you try it! Even if you don’t love INFO101 like I loved it, the 200 and 300-level papers is when your INFO degree becomes an exciting and interesting journey.</p>
+                                            <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card mb-3" style="max-width: 100%;">
+                                <div class="row no-gutters">
+                                    <div class="col-md-3">
+                                        <div id="dpmargin">
+                                            <br>
+                                        </div>
+                                        <img src="images/manraj1.png" class="card-img dp1" alt="...">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i>Manraj Rahi,</i> Current student </h5>
+                                            <p class="card-text">What attracted me to studying IS was the belief that this major provides a future-focused education and an understanding of business and the commercial world. I also felt it would complement my law degree with a unique set of skills through a different learning area.</p>
+                                            <p class="card-text">Choosing my favourite paper is tricky. INFO141 was the paper where I felt I gained an appreciation of what a Business Analyst would do and the practical skills required - I found this really valuable. In general, I’ve thoroughly enjoyed the practical elements of the program; actually being given a chance to apply the skills you learn in lectures meant the INFO degree has lived up to - and exceeded - expectations. </p>
+                                            <p class="card-text"><i>My advice to prospective students would be:</i> Make the most of it! Fully engage in your workshops and tutorials and all of the opportunities INFO gives you, to connect your degree to the real world.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card mb-3" style="max-width: 100%;">
+                                <div class="row no-gutters">
+                                    <div class="col-md-3">
+                                        <div id="dpmargin">
+                                            <br>
+                                        </div>
+                                        <img src="images/patrick1.png" class="card-img dp1" alt="...">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i>Patrick Miller,</i> Graduate</h5>
+                                            <p class="card-text">INFO101 was when I was first introduced to Information Systems, and after completing the website project, which was something completely different to any other assignments I had to do in my first year, I knew that I wanted to pursue INFO as a major. I decided to study INFO for another three years because each course I took was more and more varied than the last. </p>
+                                            <p class="card-text">It’s tough to say what my favourite course would have been - all of the 200 level INFO papers were amazing. INFO226 holds a special place in my heart because after studying it, I came back to tutor it the following year. It’s one of those courses that you get out what you put in. If you enjoy complex problem solving and the thrill of finally getting something to work after trying and trying, then this is the course for you. Extremely rewarding. </p>
+                                            <!-- <p class="card-text"><i>My advice to prospective students would be:</i> Do it. 100% do it. You will never regret the decision to study INFO. The lecturers and support staff are really lovely and helpful, most importantly the content is relevant and gives you a good understanding to grow from in whatever career you end up pursuing.</p> -->
+                                            <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+                <!-- <br> -->
+            </div>
+            <br>
+            <div class="card mb-2" ng-repeat="y in jobs | filter:test1" ng-click="myFunction1( y.Job )" style="" id="co">
+                <table>
+                    <tr>
+                        <td rowspan="2" style="transform: rotate(0);">
+                            <a href="{{ y.url }}" target="_blank" class="titlecourse"><img ng-src="{{y.icon}}" class="card-img icon" alt="..."></a>
+                        </td>
+                        <td style="width: 95%">
+                            <h5 class="card-title" style="transform: rotate(0);">
+<a href="{{ y.url }}" target="_blank" class="titlecourse"> {{ y.Job }}</a></h5>
+                        </td>
+                        <td>
+                            <br>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="{{ y.Job }}" value="{{ y.Job }}">
+                                <label class="custom-control-label" for="{{ y.Job }}"></label>
+                            </div>
+                        </td>
+                    </tr>
+                    <td>
+                        <span class="badge badge-pill badge-success">Salary: {{ y.pay }}</span><span class="badge badge-pill badge-info">Opportunities: {{ y.opportunities}}</span>
+                    </td>
+                    <tr>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <input class="form-control field" type="search" placeholder="Search" aria-label="Search" ng-model="test"><span style="width: 10px"> </span>
+                            <button class="btn btn-outline-success " type="submit" data-toggle="modal" data-target="#exampleModalLong">Search</button>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="card mb-2" ng-repeat="y in courses | filter:test" id="jobscheck">
+                                <table>
+                                    <tr>
+                                        <td rowspan="2" style="transform: rotate(0);">
+                                            <a href="{{ y.url }}" target="_blank" class="titlecourse stretched-link"><img ng-src="{{y.icon}}" class="card-img icon" alt="..."></a>
+                                        </td>
+                                        <td style="width: 95%">
+                                            <h5 class="card-title" style="transform: rotate(0);">
+                        <a href="{{ y.url }}" target="_blank" class="titlecourse stretched-link">{{ y.course + ": " + y.courseName }}</a></h5>
+                                        </td>
+                                    </tr>
+                                    <td>
+                                        <div style="font-size: 80%;"><span class="badge badge-pill badge-success">{{ y.it }}</span><span class="badge badge-pill badge-info">{{ y.is}}</span><span class="badge badge-pill badge-primary">{{ y.tri }}</span><span class="badge badge-pill badge-danger" title="Prerequisites">{{ y.Prerequisites }}</span></div>
+                                    </td>
+                                    <tr>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- model serach bar -->
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalcourse" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <input class="form-control field" type="search" placeholder="Search" aria-label="Search" ng-model="test"><span style="width: 10px"> </span>
+                            <button class="btn btn-outline-success " type="submit" data-toggle="modal" data-target="#exampleModalLong">Search</button>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <!-- <div class="modal-body">
+                            <div class="card mb-2" ng-repeat="y in courses | filter:test" id="jobscheck">
+                                <table>
+                                    <tr>
+                                        <td rowspan="2" style="transform: rotate(0);">
+                                            <a href="{{ y.url }}" target="_blank" class="titlecourse stretched-link"><img ng-src="{{y.icon}}" class="card-img icon" alt="..."></a>
+                                        </td>
+                                        <td style="width: 95%">
+                                            <h5 class="card-title" style="transform: rotate(0);">
+                        <a href="{{ y.url }}" target="_blank" class="titlecourse stretched-link">{{ y.course + ": " + y.courseName }}</a></h5>
+                                        </td>
+                                    </tr>
+                                    <td>
+                                        <span class="badge badge-pill badge-success">{{ y.it }}</span><span class="badge badge-pill badge-info">{{ y.is}}</span><span class="badge badge-pill badge-primary">{{ y.tri }}</span><span class="badge badge-pill badge-danger" title="Prerequisites">{{ y.Prerequisites }}</span>
+                                    </td>
+                                    <tr>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div> -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 
+  <div class="card mb-2">
+      <table>
+          <tr>
+              <td rowspan="2" style="transform: rotate(0);">
+                  <a href="https://www.google.com/" class="titlecourse stretched-link"><img src="images/p1.png" class="card-img icon" alt="..."></a>
+              </td>
+              <td style="width: 95%">
+                  <h5 class="card-title" style="transform: rotate(0);">
+              <a href="https://www.google.com/" class="titlecourse stretched-link">Card title</a> 
+              <span class="badge badge-pill badge-success"></span><span class="badge badge-pill badge-info"></span><span class="badge badge-pill badge-danger"></span></h5>
+              </td>
+          </tr>
+          <td>
+              <div class="comment more" style="transform: rotate(0);">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum laoreet, nunc eget laoreet sagittis, quam ligula sodales orci, congue imperdiet eros tortor ac lectus. Duis eget nisl orci. Aliquam mattis purus non mauris blandit id luctus felis convallis. Integer varius egestas vestibulum. Nullam a dolor arcu, ac tempor elit. Donec.
+              </div>
+          </td>
+          <tr>
+          </tr>
+      </table> -->
+            <h1>Courses</h1>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="level">Level:</label>
+                    <select class="form-control" ng-model="level" ng-options="z for z in levels" placeholder="All-levels">All-levels</select>
+                </div>
+                <div class="form-group col">
+                    <label for="tri">Trimester:</label>
+                    <select class="form-control" ng-model="tri" ng-options="z for z in tris" placeholder="All-levels">All-levels</select>
+                </div>
+            </div>
+            <div class="containerWork">
+                <div class="parent parent2">
+                    <div class="child" ng-repeat="y in courses | filter : {'level' : level, 'tri': tri, 'it': it }">
+                        <div class="wrapper">
+                            <div class="card radius shadowDepth1">
+                                <div class="card__image border-tlr-radius">
+
+                                    <img src="images/topic-cover-hr.jpg" alt="creating my website" class="border-tlr-radius">
+                                </div>
+                                <div class="card__meta">
+                                    <a data-toggle="modal" data-target="#exampleModalcourse" target="_blank">{{ y.course }}</a>
+                                    <time><span class="badge badge-pill badge-success">{{ y.it }}</span><span class="badge badge-pill badge-info">{{ y.is }}</span><span class="badge badge-pill badge-primary">{{ y.tri }}</h4></time>
+                              </div>
+                              <div class="card__content card__padding">
+                                 <div class="card__share">
+                                    <a id="share" class="share-toggle share-icon" target="_blank" data-toggle="modal" data-target="#exampleModalcourse"></a>
+                                 </div>
+                                 <article class="card__article overflow-auto">
+                                    <h4><a href="{{ y.url }}" target="_blank">{{ y.courseName }} </a></h4>
+                                    <span class="badge badge-pill badge-danger" title="Prerequisites" style="font-size: 60%">{{ y.Prerequisites }}</span>
+                                        <p style="font-size: 80%">{{ y.description }} </p>
+                                        </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="courseplanner-section bg-light">
+                <form id="regForm" action="">
+
+                    <h1>Course Planner:</h1>
+                    <h4>Take Information Systems as a Major, Minor or Elective:</h4>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons" id="infotype" style="width: 100%">
+                        <label class="btn btn-outline-success">
+                            <input type="radio" name="options" id="option1" autocomplete="off" checked value="Major"> Major
+                        </label>
+                        <label class="btn btn-outline-success">
+                            <input type="radio" name="options" id="option2" autocomplete="off" value="Minor"> Minor
+                        </label>
+                        <label class="btn btn-outline-success">
+                            <input type="radio" name="options" id="option3" autocomplete="off" value="Elective"> Elective
+                        </label>
+                        <label class="btn btn-outline-success">
+                            <input type="radio" name="options" id="option3" autocomplete="off" value="Not Sure"> Explore Career
+                        </label>
+                    </div>
+                    <br>
+                    <div id="specialisationdiv" style="display: none">
+                        <br>
+                        <h4>Type of Specialisation for Major:</h4>
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons" id="majortype" style="width: 100%">
+                            <label class="btn btn-outline-success">
+                                <input type="radio" name="options" id="option1" autocomplete="off" checked value="Business Analysis"> Business Analysis
+                            </label>
+                            <label class="btn btn-outline-success">
+                                <input type="radio" name="options" id="option2" autocomplete="off" value="IT Solutions"> IT Solutions
+                            </label>
+                            <label class="btn btn-outline-success">
+                                <input type="radio" name="options" id="option3" autocomplete="off" value="INFO Major"> INFO Major
+                            </label>
+                        </div>
+                    </div>
+                    <p id="p0"></p>
+                    <br>
+                    <h3>What info papers have you taken?</h3>
+
+                    <p id="p1"></p>
+                    <p id="p2"></p>
+
+                    <!-- <div class="btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-outline-success">
+                                      <input type="checkbox" checked autocomplete="off"> Checked
+                                    </label>
+                                  </div> -->
+                    <br>
+                    <div class="text-center">
+                        <div class="btn-group btn-group-toggle btn-space" data-toggle="buttons" ng-repeat="y in courses">
+                            <label class="btn btn-outline-success">
+                                <input type="checkbox" checked autocomplete="off" title="{{y.courseName}}" value="{{ y.course }}" name="sport"> {{ y.course }}
+                            </label>
+                            <a class="btn btn-success" ng-href="{{y.url}}" target="_blank" role="button"><i class="fas fa-info-circle"></i></a>
+                        </div>
+                    </div>
+                    <!-- One "tab" for each step in the form: -->
+                    <div class="tab">
+                        <div class="row2">
+                            <div class="column2" style="background-color:;">
+                                <div class="card shadowDepth mb-3" style="width: 100%;" onclick="myundergrad()">
+                                    <img class="card-img-top" src="images/tjVa.jpg" alt="Card image cap" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
+                                    <div class="card-footer">
+                                        <small><h3 class="optcard">Undergraduate / college student</h3></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column2" style="background-color:;">
+                                <div class="card shadowDepth mb-3" style="width: 100%;" onclick="postgrad()">
+                                    <img class="card-img-top" src="https://i.ytimg.com/vi/k5YhqWZ67BI/maxresdefault.jpg" alt="Card image cap" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
+                                    <div class="card-footer">
+                                        <small><h3 class="optcard">Postgraduate / Graduated</h3></small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>
+                            <input id="page1" placeholder="page1" oninput="this.className = ''" style="display: none">
+                        </p>
+                    </div>
+
+                    <div class="tab">Contact Info:
+                        <p>
+                            <input placeholder="E-mail..." oninput="this.className = ''">
+                        </p>
+                        <p>
+                            <input placeholder="Phone..." oninput="this.className = ''">
+                        </p>
+                    </div>
+
+                    <div class="tab">Birthday:
+                        <p>
+                            <input placeholder="dd" oninput="this.className = ''">
+                        </p>
+                        <p>
+                            <input placeholder="mm" oninput="this.className = ''">
+                        </p>
+                        <p>
+                            <input placeholder="yyyy" oninput="this.className = ''">
+                        </p>
+                    </div>
+
+                    <div class="tab">Login Info:
+                        <p>
+                            <input placeholder="Username..." oninput="this.className = ''">
+                        </p>
+                        <p>
+                            <input placeholder="Password..." oninput="this.className = ''">
+                        </p>
+                    </div>
+
+                    <div style="overflow:auto;">
+                        <div style="float:right;">
+                            <button type="button" id="prevBtn" onclick="nextPrev(-1)" class="btn btn-info">Previous</button>
+                            <button type="button" id="nextBtn" onclick="nextPrev(1)" class="btn btn-success">Next</button>
+                        </div>
+                    </div>
+
+                    <!-- Circles which indicates the steps of the form: -->
+                    <div style="text-align:center;margin-top:40px;">
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+        <footer class="footer"></footer>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="js1.js"></script>
+        <script src='javascript.js'></script>
+</body>
+
+</html>
