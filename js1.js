@@ -9,12 +9,16 @@ angular.module('myApp', []).controller('namesCtrl', function ($scope) {
     $scope.tris = [ "", "1", "2", "3"];
 
 
-      $scope.tri1select =function(z) {
-alert(z);
-      }
+//       $scope.tri1select =function(z) {
+// alert(z);
+//       }
 
     $scope.setSelectedjob = function(z) {
         $scope.selectedjob = z;
+    };
+
+    $scope.setSelected = function(z) {
+        $scope.selected = z;
     };
 
     $scope.myFunction1 = function(z) {

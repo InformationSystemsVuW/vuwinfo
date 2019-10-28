@@ -66,7 +66,7 @@
       <div class="containerWork">
          <div class="margintext">
             <h1>What is INFO?</h1>
-            <p>Sample text...</p>
+            <!-- <p>Sample text...</p> -->
             <h2>About the School of Information System.</h2>
             <p>The School of Information Management at Victoria University of Wellington offers a Bachelor of Commerce degree with an Information Systems major, BCom (INFO). Information Systems (IS) is the academic discipline that investigates how people and organisations use information and how IS and technology affect people, organisations and society, Information is a crucial resource and how we manage it affects every part of of life so come learn how to use information technology (IT) to solve business, organisation and societal problems and get the skills to manage information, technology and people in complex environments</p>
             <h6>What is a degree?</h6>
@@ -81,9 +81,12 @@
             <h6>Other alternatives to study information Systems</h6>
             <B>Minor explanation</B>
             <p>To obtain a minor in Information Systems you will need to complete:</p>
-            1. INFO 101
-            2. Three course from INFO 200-299
-            3. One course at 300 level</P>
+            <ol>
+            <li>INFO 101</li>
+            <li>Three course from INFO 200-299</li>
+            <li>One course at 300 level</li>   
+         </ol>
+      </P>
             <h6>What is Specialisation and why consider it?</h6>
          </div>
          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -341,6 +344,13 @@
                </div>
             </div>
             <br>
+            <p class="text-center"><b>Key:</b>
+                        <span class="text-success"> | Courses for both BA and IT Specialisation | </span>
+                           <span class="text-warning"> | Courses for BA Specialisation | </span>
+                           <span class="text-primary"> | Courses for IT Specialisation | </span>
+                           <span class="text-secondary"> | Optional 300 level courses | </span>
+                        </P>
+                        <br>
             <div class="iframe-container">
                <iframe src="http://careerquiz.sim.vuw.ac.nz/"></iframe>
             </div>
@@ -360,11 +370,11 @@
                            <table>
                               <tr>
                                  <td rowspan="2" style="transform: rotate(0);">
-                                    <a href="{{ c.url }}" target="_blank" class="titlecourse"><img ng-src="{{c.icon}}" class="card-img icon" alt="..."></a>
+                                    <a href="" target="_blank" class="titlecourse"><img ng-src="{{c.icon}}" class="card-img icon" alt="..."></a>
                                  </td>
                                  <td style="width: 95%; padding: 0">
                                     <h5 class="card-title" style="transform: rotate(0);">
-                                       <a href="{{ c.url }}" target="_blank" class="titlecourse"> {{ c.Job }}</a>
+                                       <a href="" target="_blank" class="titlecourse"> {{ c.Job }}</a>
                                     </h5>
                                  </td>
 
