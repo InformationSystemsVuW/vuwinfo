@@ -687,7 +687,7 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-  .iframe-container, .serachfield {
+  .iframecontainer, .serachfield {
     display: none;
   }
 }
@@ -699,7 +699,7 @@ footer {
 }
 
 
-.iframe-container {
+.iframecontainer {
   border-radius: 20px;
   overflow: hidden;
   /* // Calculated from the aspect ration of the content (in case of 16:9 it is 9/16= 0.5625) */
@@ -707,7 +707,7 @@ footer {
   position: relative;
 }
  
-.iframe-container iframe {
+.iframecontainer iframe {
    border: 0;
    height: 100%;
    left: 0;
