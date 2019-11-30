@@ -13,15 +13,18 @@
       <script src="https://kit.fontawesome.com/225910cad6.js"></script>
    </head>
    <body>
+      <!-- controller for angular -->
       <div ng-app="myApp" ng-controller="namesCtrl">
+         <!-- Nav Bar  -->
       <nav class="navbar navbar-light bg-light justify-content-between" style="  background: rgba(255, 255, 255, 0.1);">
          <a class="navbar-brand" href="#" style="color: #00A770;">Information Systems</a>
          <form class="form-inline">
+            <!-- Serach Bar -->
             <input class="form-control mr-sm-2 field serachfield" type="search" placeholder="Search" aria-label="Search" ng-model="test" >
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#exampleModalLong">Search</button>
          </form>
       </nav>
-    
+    <!-- banner -->
       <banner banner-model="::vm.metadata">
          <header class="sector degree-banner banner-with-cover">
             <div class="cover-holder">
@@ -63,6 +66,7 @@
             <div class="progress-bar1" id="myBar"></div>
          </div>
       </div>
+      <!-- Container Center content -->
       <div class="containerWork">
          <div class="margintext">
             <h1>What is INFO?</h1>
@@ -86,7 +90,7 @@
             <li>Three course from INFO 200-299</li>
             <li>One course at 300 level</li>   
          </ol>
-      </P>
+
             <h6>What is Specialisation and why consider it?</h6>
          </div>
          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -171,8 +175,9 @@
             <span class="sr-only">Next</span>
             </a>
          </div>
-         <!-- ------------------------------------------- carousel ----------------------------------------------- -->
+         <!-- ------------------------------------------- carousel ends ----------------------------------------------- -->
          <br>
+         <!-- info personas -->
          <div class="row">
             <div class="column2" >
                <div class="card shadowDepth mb-3" style="width: 100%;" onclick="myundergrad()">
@@ -195,6 +200,7 @@
                </div>
             </div>
          </div>
+         <!-- info courses -->
          <div class="containerWork">
             <h1>Information Systems Courses</h1>
             <div class="accordion" id="accordionExample2">
@@ -344,6 +350,7 @@
                </div>
             </div>
             <br>
+            <!-- key -->
             <p class="text-center"><b>Key:</b>
                         <span class="text-success"> | Courses for both BA and IT Specialisation | </span>
                            <span class="text-warning"> | Courses for BA Specialisation | </span>
@@ -351,9 +358,11 @@
                            <span class="text-secondary"> | Optional 300 level courses | </span>
                         </P>
                         <br>
+
             <div class="iframecontainer">
-               <iframe src="http://careerquiz.sim.vuw.ac.nz/"></iframe>
+               <iframe src="http://careerquiz.sim.vuw.ac.nz"></iframe>
             </div>
+
             <div class="text-center" id="buttonlink">
                <img src="images/sim careers quiz.PNG" class="img-fluid"  style="border-radius: 20px;">
                <br><br>
@@ -388,7 +397,7 @@
             </div>
             <br>
             <br>
-            <!-- Modal -->
+            <!-- Modal for courses -->
             <div class="modal fade" id="coursepopup" tabindex="-1" role="dialog" aria-labelledby="coursepopup" aria-hidden="true">
                <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
@@ -554,8 +563,8 @@
                   </div>
                </div>
             </div>
-            <!-- Modal -->
-            <!-- Modal -->
+
+            <!-- Modal for jobs -->
             <div class="modal fade" id="jobpopup" tabindex="-1" role="dialog" aria-labelledby="jobpopup" aria-hidden="true">
                <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
@@ -588,6 +597,7 @@
                   </div>
                </div>
             </div>
+            <!-- Modal for serach bar -->
             <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
@@ -637,32 +647,14 @@
                         <span aria-hidden="true">&times;</span>
                         </button>
                      </div>
-                     <!-- <div class="modal-body">
-                        <div class="card mb-2" ng-repeat="y in courses | filter:test" id="jobscheck">
-                            <table>
-                                <tr>
-                                    <td rowspan="2" style="transform: rotate(0);">
-                                        <a href="{{ y.url }}" target="_blank" class="titlecourse stretched-link"><img ng-src="{{y.icon}}" class="card-img icon" alt="..."></a>
-                                    </td>
-                                    <td style="width: 95%">
-                                        <h5 class="card-title" style="transform: rotate(0);">
-                        <a href="{{ y.url }}" target="_blank" class="titlecourse stretched-link">{{ y.course + ": " + y.courseName }}</a></h5>
-                                    </td>
-                                </tr>
-                                <td>
-                                    <span class="badge badge-pill badge-success">{{ y.it }}</span><span class="badge badge-pill badge-info">{{ y.is}}</span><span class="badge badge-pill badge-primary">{{ y.tri }}</span><span class="badge badge-pill badge-danger" title="Prerequisites">{{ y.Prerequisites }}</span>
-                                </td>
-                                <tr>
-                                </tr>
-                            </table>
-                        </div>
-                        </div> -->
+                    
                      <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                      </div>
                   </div>
                </div>
             </div>
+            <!-- Course Planner tool -->
             <span class="anchor" id="Planner"></span>
             <h1 class="text-green text-center">Course Planner:</h1>
             <div class="courseplanner-section bg-light" >
@@ -773,6 +765,7 @@
                         </p>
                      </div>
                   </div>
+                  <!-- Course planner - papers to do in 2020 -->
                   <div class="tab">
                      <h2 class="text-green text-center">Courses to take in 2020</h2>
                      <!-- <br> -->
@@ -952,6 +945,7 @@
                      </P>
                      <br>
                      <h2 class="text-green text-center">2020 Course Timetable</h2>
+                     <!-- Table of paper that will be taken in 2020 for each tri -->
                      <table style="width: 100%;">
                         <tr>
                            <th style="width: 200px;"></th>
@@ -995,6 +989,7 @@
             </div>
          </div>
       </div>
+      <!-- FAQ section -->
       <div class="containerWork">
         <span class="anchor" id="FAQ"></span>
          <h1 style="text-align: center" >FAQ</h1>
